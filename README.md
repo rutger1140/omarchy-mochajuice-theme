@@ -34,6 +34,7 @@ omarchy-refresh-waybar
 - `colors.toml` — palette (Catppuccin Mocha)
 - `backgrounds/` — wallpapers
 - `btop.theme`, `icons.theme`, `neovim.lua`, `vscode.json`, `waybar.css` — per-app theming
+- `hyprland.conf` — accent border color + `rounding = 8` for soft window corners
 - `waybar-theme/` — optional pill-style Waybar config
 
 ## Credit
