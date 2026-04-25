@@ -2,10 +2,6 @@
 
 A Catppuccin Mocha-based theme for [Omarchy](https://omarchy.org/), with rounded window corners and a tmux-style pill Waybar layout — applied automatically while the theme is active.
 
-## Preview
-
-![Preview](preview.png)
-
 ## Install
 
 ```bash
