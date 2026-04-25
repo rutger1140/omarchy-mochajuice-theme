@@ -1,2 +1,69 @@
+/* This file is not a full waybar stylesheet.
+ * It is intended to be @import-ed by ~/.config/waybar/style.css.
+ * Selectors are prefixed with `window#waybar` to win on specificity
+ * over rules in the stock style.css. */
+
 @define-color foreground #cdd6f4;
 @define-color background #181824;
+
+/* Catppuccin Mocha palette */
+@define-color base       #1e1e2e;
+@define-color mantle     #181825;
+@define-color surface1   #45475a;
+@define-color text       #cdd6f4;
+@define-color blue       #89b4fa;
+@define-color mauve      #cba6f7;
+@define-color peach      #fab387;
+@define-color red        #f38ba8;
+@define-color yellow     #f9e2af;
+
+/* Transparent bar so the pills float */
+window#waybar {
+  background-color: transparent;
+}
+
+/* Pill groups */
+window#waybar .modules-left,
+window#waybar .modules-center,
+window#waybar .modules-right {
+  color: @base;
+  border-radius: 11px;
+  padding: 0 10px;
+  margin: 3px 6px;
+}
+
+window#waybar .modules-left   { background-color: @blue; }
+window#waybar .modules-center { background-color: @mauve; }
+window#waybar .modules-right  { background-color: @peach; }
+
+/* Children inside pills: dark text, transparent bg so the pill color shows */
+window#waybar .modules-left *,
+window#waybar .modules-center *,
+window#waybar .modules-right * {
+  background-color: transparent;
+  color: @base;
+}
+
+window#waybar #workspaces button {
+  color: @base;
+}
+
+window#waybar #custom-screenrecording-indicator.active,
+window#waybar #custom-idle-indicator.active,
+window#waybar #custom-notification-silencing-indicator.active,
+window#waybar #custom-voxtype.recording {
+  color: @red;
+}
+
+window#waybar #battery.warning  { color: @yellow; }
+window#waybar #battery.critical { color: @red; }
+
+window#waybar tooltip {
+  background-color: @mantle;
+  border: 1px solid @surface1;
+  border-radius: 8px;
+}
+
+window#waybar tooltip label {
+  color: @text;
+}

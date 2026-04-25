@@ -1,6 +1,6 @@
 # Mochajuice
 
-A Catppuccin Mocha-based theme for [Omarchy](https://omarchy.org/), shipped with a tmux-style pill Waybar layout.
+A Catppuccin Mocha-based theme for [Omarchy](https://omarchy.org/), with rounded window corners and a tmux-style pill Waybar layout — applied automatically while the theme is active.
 
 ## Preview
 
@@ -12,30 +12,15 @@ A Catppuccin Mocha-based theme for [Omarchy](https://omarchy.org/), shipped with
 omarchy-theme-install https://github.com/rutger1140/omarchy-mochajuice-theme
 ```
 
-This clones the theme into `~/.config/omarchy/themes/mochajuice` and activates it.
-
-## Optional: pill-style Waybar
-
-The `waybar-theme/` directory contains an opinionated Waybar layout — three colored "pills" (left/center/right) on a transparent bar, dark text on accent backgrounds. Apply it with:
-
-```bash
-cp ~/.config/omarchy/themes/mochajuice/waybar-theme/* ~/.config/waybar/
-omarchy-restart-waybar
-```
-
-To revert to the stock Omarchy Waybar:
-
-```bash
-omarchy-refresh-waybar
-```
+This clones the theme into `~/.config/omarchy/themes/mochajuice` and activates it. Switching away (`omarchy-theme-set <other>`) reverts everything cleanly.
 
 ## What's included
 
-- `colors.toml` — palette (Catppuccin Mocha)
+- `colors.toml` — Catppuccin Mocha palette
 - `backgrounds/` — wallpapers
-- `btop.theme`, `icons.theme`, `neovim.lua`, `vscode.json`, `waybar.css` — per-app theming
-- `hyprland.conf` — accent border color + `rounding = 8` for soft window corners
-- `waybar-theme/` — optional pill-style Waybar config
+- `btop.theme`, `icons.theme`, `neovim.lua`, `vscode.json` — per-app theming
+- `hyprland.conf` — accent border color + `rounding = 8` for soft window corners. Sourced by `~/.config/hypr/hyprland.conf`.
+- `waybar.css` — three-pill Waybar layout (blue / mauve / peach on a transparent bar). `@import`-ed by `~/.config/waybar/style.css`; selectors prefixed with `window#waybar` to win specificity over the stock rules.
 
 ## Credit
 
