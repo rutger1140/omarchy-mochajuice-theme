@@ -18,7 +18,8 @@
 @define-color yellow     #f9e2af;
 
 /* Transparent bar so the pills float */
-window#waybar {
+window#waybar,
+window#waybar > box {
   background-color: transparent;
 }
 
